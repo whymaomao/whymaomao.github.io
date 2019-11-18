@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="MarkDown syntax1.test lists Item 1 Item 2">
+<meta name="description" content="Spring Security1. Refrence https://docs.spring.io/spring-security/site/docs/5.0.14.BUILD-SNAPSHOT/reference/htmlsingle/ Spring Security 对 Web 安全性的支持大量地依赖于 Servlet 过滤器。这些过滤器拦截进入请求，并且在应用程序处理该请求之前进行某些安全处">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MarkDown Study">
 <meta property="og:url" content="http://yoursite.com/2019/08/28/MarkDown-Study/index.html">
 <meta property="og:site_name" content="Mia Hu&#39;s Blog">
-<meta property="og:description" content="MarkDown syntax1.test lists Item 1 Item 2">
+<meta property="og:description" content="Spring Security1. Refrence https://docs.spring.io/spring-security/site/docs/5.0.14.BUILD-SNAPSHOT/reference/htmlsingle/ Spring Security 对 Web 安全性的支持大量地依赖于 Servlet 过滤器。这些过滤器拦截进入请求，并且在应用程序处理该请求之前进行某些安全处">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-28T12:19:25.662Z">
+<meta property="og:updated_time" content="2019-11-18T14:17:56.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MarkDown Study">
-<meta name="twitter:description" content="MarkDown syntax1.test lists Item 1 Item 2">
+<meta name="twitter:description" content="Spring Security1. Refrence https://docs.spring.io/spring-security/site/docs/5.0.14.BUILD-SNAPSHOT/reference/htmlsingle/ Spring Security 对 Web 安全性的支持大量地依赖于 Servlet 过滤器。这些过滤器拦截进入请求，并且在应用程序处理该请求之前进行某些安全处">
 
 
 
@@ -299,9 +299,25 @@
       
 
       
-        <h2 id="MarkDown-syntax"><a href="#MarkDown-syntax" class="headerlink" title="MarkDown syntax"></a>MarkDown syntax</h2><h3 id="1-test-lists"><a href="#1-test-lists" class="headerlink" title="1.test lists"></a>1.test lists</h3><ul>
-<li>Item 1</li>
-<li>Item 2</li>
+        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><h3 id="1-Refrence"><a href="#1-Refrence" class="headerlink" title="1. Refrence"></a>1. Refrence</h3><ul>
+<li><a href="https://docs.spring.io/spring-security/site/docs/5.0.14.BUILD-SNAPSHOT/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-security/site/docs/5.0.14.BUILD-SNAPSHOT/reference/htmlsingle/</a></li>
+<li>Spring Security 对 Web 安全性的支持大量地依赖于 Servlet 过滤器。这些过滤器拦截进入请求，并且在应用程序处理该请求之前进行某些安全处理。 Spring Security 提供有若干个过滤器，它们能够拦截 Servlet 请求，并将这些请求转给认证和访问决策管理器处理，从而增强安全性。根据自己的需要，可以使用适当的过滤器来保护自己的应用程序。</li>
+<li>如果使用过 Servlet 过滤器且令其正常工作，就必须在 Web 应用程序的 web.xml 文件中使用 filter 和 filter-mapping 元素配置它们。虽然这样做能起作用，但是它并不适用于使用依赖注入进行的配置。</li>
+<li>FilterToBeanProxy 是一个特殊的 Servlet 过滤器，它本身做的工作并不多，而是将自己的工作委托给 Spring 应用程序上下文 中的一个 Bean 来完成。被委托的 Bean 几乎和其他的 Servlet 过滤器一样，实现 javax.servlet.Filter 接口，但它是在 Spring 配置文件而不是 web.xml 文件中配置的。</li>
+<li>实际上，FilterToBeanProxy 代理给的那个 Bean 可以是 javax.servlet.Filter 的任意实现。这可以是 Spring Security 的任何一个过滤器，或者它可以是自己创建的一个过滤器。但是，Spring Security 要求至少配置四个而且可能一打或者更多的过滤器。</li>
+<li><p>Spring Security 目前支持认证一体化如下认证技术：</p>
+<ul>
+<li>HTTP BASIC authentication headers (一个基于 IEFT RFC 的标准)</li>
+<li>HTTP Digest authentication headers (一个基于 IEFT RFC 的标准)</li>
+<li>HTTP X.509 client certificate exchange (一个基于 IEFT RFC 的标准)</li>
+<li>LDAP (一个非常常见的跨平台认证需要做法，特别是在大环境)</li>
+<li>Form-based authentication (提供简单用户接口的需求)</li>
+<li>OpenID authentication</li>
+<li>Computer Associates Siteminder</li>
+<li>JA-SIG Central Authentication Service (CAS，这是一个流行的开源单点登录系统)</li>
+<li>Transparent authentication context propagation for Remote Method Invocation and HttpInvoker (一个 Spring 远程调用协议)</li>
+</ul>
+</li>
 </ul>
 
       
@@ -449,7 +465,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MarkDown-syntax"><span class="nav-number">1.</span> <span class="nav-text">MarkDown syntax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-test-lists"><span class="nav-number">1.1.</span> <span class="nav-text">1.test lists</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Security"><span class="nav-number">1.</span> <span class="nav-text">Spring Security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Refrence"><span class="nav-number">1.1.</span> <span class="nav-text">1. Refrence</span></a></li></ol></li></ol></div>
             
 
           </div>
